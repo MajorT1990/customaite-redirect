@@ -6,7 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <title>Customaite redirect</title>
-  <script>window.location.href = "https://app-dev.customaite.ai";</script>
+  <script>
+  
+  var old = window.location.href
+  if(old.includes('adore4customs')){
+    var n = old.replace(/adore4customs/g, 'customaite')
+    window.location.replace(n);
+  } else {
+    window.location.replace("https://app-dev.customaite.ai");
+  }
+  
+  
+  </script>
 </head>
 
 <body>
